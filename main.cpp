@@ -1,5 +1,6 @@
 #include <iostream>
 #include "pa/th/thTest.h"
+#include "pa/arr/QueueTest.h"
 
 void hello() {
     double temp = 10;
@@ -11,9 +12,14 @@ void threadTest() {
     t.test();
 }
 
+void queueTest() {
+    QueueTest t;
+    t.test1();
+}
+
 
 int main()
 {
-    threadTest();
+    queueTest();
     return 0;
 }

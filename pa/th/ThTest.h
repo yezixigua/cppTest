@@ -2,6 +2,7 @@
 #include <pthread.h>
 #include <unistd.h>
 #include <iostream>
+#include <queue>
 
 
 using namespace std;
@@ -11,8 +12,9 @@ class ThTest
 private:
     /* data */
     bool isRunning;
-    pthread_t thread;
+    pthread_t pid;
     int fd;
+    queue<int> queue;
 
     static void *run(void *para);
 
